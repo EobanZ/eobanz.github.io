@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Bachelor Details</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Overview</a></li>
+							<li class="active"><a href="hooking.html">Hooking Framework</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://github.com/EobanZ" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Hooking Framework</h1>
+								</header>
+								<div class="image main"><img src="images/hook/jmpHook.png" alt="" style="width: 70%; margin-left: auto; margin-right: auto; border: 1px solid"/><dd style="text-align: center;">Veranschaulichung eines Midfuction Hooks in x86</dd></div>
+								<p>Dieses kleine "Framework" ermöglicht das injizieren von Assembler Caves in fremden Quellcode.
+									In der <i>main.cpp</i> wird gezeigt, wie ein <i>MidfunctionHook</i> in dem Spiel <i>No Man's Sky</i> verwendet werden kann um die Anzahl der gesammelten Ressourcen zu erhöhen.
+									Das Framework entstand, da die existierenden Bibliotheken/Frameworks für meine Zwecke einen zu hohen Overload hatten. Außerdem wollte ich mehr über die Aufrufkonventionen, Register, etc.. von x64 Architekturen lernen.
+									Dem Nutzer ist es möglich zu entscheiden ob der Hook eine Relative (In 2GB memory range) oder Absolute Jmp Adresse für das Trampolin verwenden möchte (Relativ benötigt 5 Bytes, Absolut 14 Bytes).
+									Da dieses Projekt keinen Assembler und Disassembler verwendet, muss der zu injizierende Assembler Code im Voraus kompiliert werden. Da kein Disassembler verwendet wird, darf sich im überschriebenen Quellcode keine Instruktion mit relativer Adresse befinden.
+									Als nächstes soll das Projekt um einen Call Hook (auch Detour gennant) erweitert werden.
+								</p>
+								<p>Detailiertere Infos über Hooks sind in meiner <a href="Bachelor.html">Bachelorarbeit</a> zu finden</p>
+
+								
+								
+								<div style="margin-left: auto; margin-right: auto; text-align: center; ">
+									<a href="https://github.com/EobanZ/EoHooks" class="button">Source Code </a>
+								</div>
+								
+									
+								
+								
+							</section>
+
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+			
+					<footer id="footer">
+			
+						<section class="split contact">
+							
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://github.com/EobanZ" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
