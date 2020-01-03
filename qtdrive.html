@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Qt Google Drive</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Overview</a></li>
+							<li class="active"><a href="qtdrive.html">Qt Google Drive</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://github.com/EobanZ/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Qt Google Drive</h1>
+								</header>
+								<div class="image main"><img src="images/qtdrive/qtdrive1.PNG" alt="" style="width: 70%; margin-left: auto; margin-right: auto; border: 1px solid"/></div>
+								<div class="image main"><img src="images/qtdrive/cloud.gif" alt="" style="width: 70%; margin-left: auto; margin-right: auto; border: 1px solid"/></div>
+
+								<p>Mit dieser Anwendung wollte ich herausfinden wie man mithilfe des Qt Frameworks mit Cloud Services wie Google Drive, Onedrive, Dropbox, etc.. interagieren kann.
+									Im laufe der Recherche und Entwicklung habe ich mich dann jedoch nur auf einen Service festgelet: Google Drive. Durch diese späte Entscheidung 
+									wurde der Code etwas komplexer als eigentlich nötig. Die wichtigsten Funktionen, die für die Kommunikation mit der Cloud verantwortlich sind
+									befinden sich in den Klassen: Authenticator_GoogleDrive & CloudInterface_GoogleDrive. 
+								</p>
+								<p>Die Anwendung ermöglicht es Dateien per Drag and Drop, in neu erstellte Ordner hochzuladen. Diese Ordner werden im Programm aufgelistet
+									und durch einen Doppelklick kann ein Link zum Teilen abgerufen werden. Die Ordner samt Daten können durch ein Kontextmenü auch wieder gelöscht werden.
+								</p>
+								<p>Im Source Code finden sich unteranderem Beispiele wie man mit der Qt Bibliothek folges durchführen kann</p>
+								<ul>
+									<li>OAuth2 Authentifizierung mihilfe des QOAuth2AuthorizationCodeFlow</li>
+									<li>Uploaden von Daten als resumable-upload</li>
+									<li>Uploaden von Daten als multipart-upload</li>
+									<li>Erstellen von Ordnern</li>
+									<li>Löschen von Ordnern</li>
+									<li>Teilen von Ordnern und Daten</li>
+									<li>Erstellen von API queries.</li>
+								</ul>
+
+								
+								<div style="margin-left: auto; margin-right: auto; text-align: center; ">
+									<a href="https://github.com/EobanZ/QtGoogleDrive" class="button">Source Code </a>
+								</div>
+								
+									
+								
+								
+							</section>
+
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+			
+					<section class="split contact">
+						
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://github.com/EobanZ" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
