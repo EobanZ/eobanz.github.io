@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Advetured Realit</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Overview</a></li>
+							<li class="active"><a href="adventuredreality.html">Adventured Reality</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://github.com/EobanZ/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							
+							
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Adventured Reality</h1>
+
+								</header>
+								<div class="image main"><img src="images/adventuredreality/sceneUnity.PNG" alt="" style="width: 70%; margin-left: auto; margin-right: auto; border: 1px solid"/></div>
+								
+								<h4>Verwendete Frameworks/Libs/Enigine</h4>
+								<ul>
+									<li>Unity 2018.4.11f</li>
+									<li>Microsoft Mixed Reality Toolkit</li>
+									<li>Vuforia</li>
+								</ul>
+								<h4>Verwendete Third Part Software</h4>
+								<ul>
+									<li>Blender</li>
+									<li>Simplygon</li>
+									<li>Photoshop</li>
+								</ul>
+
+								<h4>ForschungsFrage:</h4>
+								<p>Wie können die <b>Lernfähigkeit</b> von Technologien und <b>AR</b> eingesetzt werden, um Probleme bei der Aushandlung von 
+								<b>Nutzungsregeln</b> mit medial augmentierten Objekten im öffentlichen Raum zu adressieren?</p>
+
+								<h3>Überblick</h3>	
+								<p>In diesem Praktkum sollte für eine Nutzerstudie ein <b>Immersives AR-Game</b> für die MS HoloLens entwickelt werden.
+								Das Spiel besteht aus mehreren Minispielen und Rätseln, die über den Campus der Uni Augsburg verteilt sind. Das Hauptziel dieses
+								Projekts war mithilfe von <b>bestärkendem Lernen</b> zu lernen wann dem Spieler Tipps zur Lösung gegeben werden soll und von welcher Art diese sein sollen.
+								Die Teilehmer des Praktikums wurden in insgesammt 4 Gruppen aufgeteilt. Jede dieser Gruppe sollte ein Minispiel/Rätsel erstellen und war für eine der folgenden Zusatzaufgaben verantwortlich.</p>
+								<ol>
+									<li>Gruppe1: Tracking</li>
+									<li>Gruppe2: Allgemeines User Interface, Assets und andere Globale Interfaces</li>
+									<li>Gruppe3: Reinfocement Learning -> Zeitpunkt für Tipps lernen</li>
+									<li>Gruppe4: Reinfocement Learning -> Gestaltung/Art für Tipps lernen</li>
+								</ol>
+
+								<h3>Meine Aufgaben in diesem Projekt</h3>
+								<p>Ich war in Grupp2 und somit neben dem Minispiel auch für das Globale UI verantwortlich.</p>
+								<h4>Das Spiel</h4>
+								<p>Die Story des Spieles ist, dass die bekannte <b>Campus Cat</b> der Uni Augsburg verschunden ist und
+								wiedergefunden werden muss. Der Spieler wird von Minispiel zu Minispiel geschickt um die Katze zu finden. Das Level meiner Gruppe ist das letzte in der Story und endet damit, dass die Katze gefunden wird.
+								Der Eingang zu unserem Level wird durch einen Wächter geschützt der den Spieler nur vorbei lässt, wenn er ihm einen Fisch bringt, den man im vorherigen Level erhalten kann.
+								Ist man am Wächter vorbei, sieht man eine Animation in der die Katze vor den Hunden flieht und sich auf deinem Baum versteckt.
+								In unserem Minispiel geht es nun darum mithilfe der im Level zuvor erhaltenen Fische und einer Schleuder, die Hunde lange genug abzulenken um die Katze vom
+								Baum holen zu können. Der Aufbau des Levels ist im ersten Bild auf dieser Seite zu sehen. <br></p>
+								<p>Für das Level wurde, mithilfe einer Satelitenaufnahme, in Blender ein teil eines Innenhofs der Uni nachgebaut. Dieses Mesh wurde unter anderem für das NavMesh der Hunde verwendet.</p>
+								<div class="image main"><img src="images/adventuredreality/topGE.PNG" alt="" style="width: 70%; margin-left: auto; margin-right: auto; border: 1px solid"/></div>
+								<div class="image main"><img src="images/adventuredreality/topUnity.PNG" alt="" style="width: 70%; margin-left: auto; margin-right: auto; border: 1px solid"/></div>
+								<p>In der Game Szene war ich vor allem für die KI der Hunde, den GameManager, die Katzen Logik und für die Fische verantwortlich.
+									Die Hunde KI wurde mit einer Statemachine umgesetzt:
+								</p>
+								<div class="image main"><img src="images/adventuredreality/dogState.png" alt="" style="width: 70%; margin-left: auto; margin-right: auto; border: 1px solid"/></div>
+								
+								<h4>Zusatzaufgaben (Globale Interfaces)</h4>
+								<p>Bei den Zusatzaufgaben habe ich mich um folgende Punkte gekümmert:</p>
+								<ol>
+									<li>Globaler UI Manager</li> 
+									<p>Ein globales Interface durch das alle Entwickler einheitliche Text/Sprite Windows, Sprechblasen und Dialoge erzeugen können</p>
+
+									<li>Globaler Quest Manager</li>
+									<p>Ein globales Interface durch das alle Gruppen den aktuellen fortschritt des Spieler abfragen oder bei wechsel durch Events darüber infomiert werden können</p>
+									
+									<li>Globaler Inventory Manager</li>
+									<p>Ein globales Interface, durch das Gegenstände in das Inventar gelegt oder daraus entnommen werden können. Der Spieler kann die Gegenstände durch das Eventgetriebene Inventory UI benutzen oder einsehen</p>
+								</ol>
+								<p>Um die Erstellung der Tipps für alle Gruppen zu erleichtern, habe ich auch ein Custom Editor Tool bzw. einen Workflow zur Erstellung von Tipps programmiert.
+									Das Tool erstellt mit den durch die Gruppen bereitgestellten Daten, Callbacks die einem von der Reinfocement Gruppe benötigten Dictionary übergeben werden.
+								</p>
+								<div class="image main"><img src="images/adventuredreality/tippWorkflow.PNG" alt="" style="width: 70%; margin-left: auto; margin-right: auto; border: 1px solid"/></div>
+								<div class="image main"><img src="images/adventuredreality/TippsDia.png" alt="" style="width: 70%; margin-left: auto; margin-right: auto; border: 1px solid"/></div>
+								
+								<h4>Weiteres..</h4>
+								<p>Außerdem habe ich das 3D Model der Campus Cat gerigged, animiert und LODs von ihr erstellt</p>
+								<div class="image main"><img src="images/adventuredreality/cat_rig.png" alt="" style="width: 70%; margin-left: auto; margin-right: auto; border: 1px solid"/></div>
+								<div class="image main"><img src="images/adventuredreality/LODs.PNG" alt="" style="width: 70%; margin-left: auto; margin-right: auto; border: 1px solid"/></div>
+										
+								
+							</section>
+
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+			
+					<section class="split contact">
+						
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://github.com/EobanZ" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+	
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
