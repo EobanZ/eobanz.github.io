@@ -37,17 +37,40 @@
 								<header class="major">
 									<h1>Masterarbeit</h1>
 									<h3>Natives Co-Location Plugin für Unity</h3>
-									<h4>Abgabe: 01.08.2022</h4>
 								</header>
 								<div class="image main"><img src="images/master/master_transf.png" alt="" style="width: 70%; margin-left: auto; margin-right: auto; border: 1px solid"/></div>
-								<p> Die zur Software gehörende Literatur befindet sich zurzeit noch in Arbeit.
-									In dieser Arbeit werden drei möglichkeiten vorgestellt, wie die Tranformation zwischen XR-Geräten ermittelt werden können.
-									Im Plugin wurden diese Methoden dann praktisch umgesetzt. Außerdem wurde ebenfalls auf nativer Ebene ein Netzwerk-System implementiert durch das die Posen der Teilnehmer im lokalen Netzwerk sehr einfach synchronisiert werden können.
-									Die Schnittstelle zur Nutzung int Unity wurde ebenfalls implementiert.</p>
-						
+								<h4> Kurzfassung: </h4>
+								<p> Aktuelle Lösungen zur Erstellung von co-located VR-Anwendungen basieren typischerweise auf der Synchronisierung von plattformspezifischen Raumankern oder geteilten
+									SLAM-Daten, welche meist an Cloud-Services gekoppelt sind. Diese Lösungen benötigen
+									entweder Zugriff auf die Bilder der Kamera oder auf die gesammelten SLAM-Daten, was
+									einige VR-Headsets untersagen. Aus diesem Grund werden in dieser Arbeit zwei bekannte
+									Kalibrationsmethoden engineunabhängig hergeleitet, erweitert und auch eine völlig neue
+									Methode zur Lösung des Co-Location-Problems vorgestellt, die für alle XR-Geräte mit
+									räumlichem Gedächtnis anwendbar sind. Die Arbeit beschreibt, wie diese Methoden
+									in einem zum größten Teil nativ implementierten Toolkit umgesetzt und Entwicklern
+									über ein Unity-Package nutzbar gemacht wurden. Außerdem werden diverse Aspekte des
+									Toolkit, wie etwa die Usability der Methoden, die verwendeten Algorithmen und der
+									auftretende Positionsfehler evaluiert.</p>
+
+								<div style="text-align: center;">
+									<video controls style="width: 70%; margin-left: auto; margin-right: auto; border: 1px solid;">
+										<source src = "COLTK_Demo.mp4" type="video/mp4" >
+									</video>
+									<dd style="text-align: center;">Live Demo: Ausrichtung und Transformationsbestimmung mittels der "Guardian"-Methode</dd>
+								</div>
+
+								<div style="text-align: center;">
+									<video controls style="width: 70%; margin-left: auto; margin-right: auto; border: 1px solid;">
+										<source src = "COLTK_SDK_Demo.mp4" type="video/mp4" >
+									</video>
+									<dd style="text-align: center;">Demo: Nutzung des COLTK-SDKs</dd>
+								</div>
 								
 							</section>
-
+								<div style="margin-left: auto; margin-right: auto; text-align: center; ">
+									<a href="Masterarbeit_Zwick.pdf" class="button">Download PDF</a>
+									<a href="COLTK_Source.zip" class="button">Download Source CODE</a>
+								</div>
 
 					</div>
 
