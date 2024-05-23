@@ -1,6 +1,6 @@
 ---
 title: Software Engineer - Master-Projekt
-date: Mär 2022-Sep 2022
+date: Mar 2022 - Sep 2022
 url: ""
 location: Munich, Germany
 org: Maibornwolff GmbH
