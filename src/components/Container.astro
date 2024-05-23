@@ -27,11 +27,12 @@ const PDF = "/cv-20240219.pdf";
           <Card
             title={item.frontmatter.title}
             timeframe={item.frontmatter.date}
-            description={item.compiledContent()} //TODO: add short description field, Create new Component for Projects
+            description={item.compiledContent()} 
             tags={item.frontmatter.tags}
             url={item.frontmatter.url}
             url_name={item.frontmatter.org}
             location={item.frontmatter.location}
+            subtitle={item.frontmatter.subtitle}
           />
         );
       })
@@ -47,8 +48,11 @@ const PDF = "/cv-20240219.pdf";
             timeframe={item.frontmatter.date}
             location={item.frontmatter.location}
             tags={item.frontmatter.tags}
-            url={item.url}
+            url={"#"}
             url_name={item.frontmatter.institute}
+            subtitle={item.frontmatter.subtitle}
+            subsubtitle={item.frontmatter.subsubtitle}
+            description={item.compiledContent()}
           />
         );
       })
@@ -62,10 +66,11 @@ const PDF = "/cv-20240219.pdf";
           <Card
             title={item.frontmatter.title}
             timeframe={item.frontmatter.date}
-            description={item.compiledContent()}
-            tags={item.frontmatter.tags}
-            url={item.frontmatter.url}
+            description={item.frontmatter.short_description}
+            tags={item.frontmatter.techstack}
+            url={item.url}
             url_name={"View project"}
+            preview_image_url={item.frontmatter.preview_image_url}
           />
         );
       })

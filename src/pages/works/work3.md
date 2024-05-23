@@ -1,7 +1,8 @@
 ---
-title: Software Engineer - Master-Projekt
+title: Software Engineer, master's student
+subtitle: Developing a native plugin for the company
 date: Mar 2022 - Sep 2022
-url: ""
+url: "https://www.maibornwolff.de/"
 location: Munich, Germany
 org: Maibornwolff GmbH
 tags:

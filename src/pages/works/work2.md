@@ -1,13 +1,13 @@
 ---
-title: Software Developer - Werkstudent
+title: Workingstudent
+subtitle: Software engineer for augmented and virtual reality applications
 date: Apr 2020 - Feb 2022
-url: ""
+url: "https://www.maibornwolff.de/"
 location: Augsburg, Germany
 org: MaibornWolff GmbH
 tags:
   [
     "Unity","Unreal", "Mobile", "AR", "VR", "C#", "C++", "Meta Quest", "Meta Rift", "Hololens",
-    "Meta Quest"
   ]
 ---
 

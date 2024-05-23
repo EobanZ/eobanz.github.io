@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-const { timeframe, title, description, url, tags, url_name, location } =
+const { timeframe, title, description, url, tags, url_name, location, subtitle, subsubtitle, preview_image_url } =
   Astro.props;
 ---
 
@@ -9,6 +9,8 @@ const { timeframe, title, description, url, tags, url_name, location } =
     <div class="grid grid-cols-3 gap-4 mb-2">
       <div class="self-start col-span-2 justify-self-start text-left">
         <h1 class="uppercase card-title font-extrabold tracking-tighter md:text-2xl">{title}</h1>
+        <h2>{subtitle}</h2>
+        <h2>{subsubtitle}</h2>
         {location && (
           <div class="flex items-center mt-2">
             <Icon name="carbon:location" class="w-4 h-4 mr-1" />
@@ -39,13 +41,17 @@ const { timeframe, title, description, url, tags, url_name, location } =
           </div>
         )}
       </div>
-
-      <div class="self-center justify-self-end">
+      {preview_image_url && (
+        <div class="self-center justify-self-end">
+          <img src={preview_image_url} alt={title} class="max-w-full h-auto rounded shadow-md" />
+        </div>)}
+      {url && (<div class="self-center justify-self-end">
         <a href={url} target="_blank" class="link link-hover text-sm text-right flex justify-center items-center">
           {url_name}
           {url !== "#" && <Icon name="carbon:link" class="w-4 h-4 ml-2" />}
         </a>
-      </div>
+      </div>)}
+      
     </div>
   </div>
 </div>
