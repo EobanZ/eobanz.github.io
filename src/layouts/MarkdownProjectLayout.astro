@@ -1,15 +1,25 @@
 ---
 import Image from "astro/components/Image.astro";
 import SharedLayout from "./SharedLayout.astro";
+import Prose from "../components/Prose.astro";
 
-const {frontmatter} = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
 <SharedLayout>
-    <a href="/">Back to Portoflio</a>
+    <a class="back btn btn-outline my-4 absolute top-0 md:left-16" href="/"
+        >Back to Resume</a
+    >
     <div class="image-container">
-        <Image src={frontmatter.preview_image_url} alt={frontmatter.title} width="100" height="100" class="w-full h-auto" />
+        <Image
+            src={frontmatter.preview_image_url}
+            alt={frontmatter.title}
+            width="100"
+            height="100"
+            class="w-full h-auto"
+        />
     </div>
-<slot/>
+    <Prose>
+        <slot />
+    </Prose>
 </SharedLayout>
-
