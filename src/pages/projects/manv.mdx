@@ -1,0 +1,41 @@
+---
+layout: "../../layouts/MarkdownProjectLayout.astro"
+title: "MANV VR"
+subtitle: "VR Trainingssimulator für Ärzte und Helfer"
+short_description: "Eine Virtual Reality Anwendung, welche MANV (Massenanfall von Verletzten) Situationen simuliert. Die verwendete Engine hierbei war Unity"
+preview_image_url: "/project_assets/manv/1.png"
+techstack: ["Unity","C#","VR","VRTK","Mobile","HTC-Vive","Photogrammetry","Blender", "FL-Studio"]
+priority: 7
+---
+import Image from "../../components/Image.astro"
+import ImageWithCaption from "../../components/ImageWithCaption.astro"
+import ProjectFileDownloadButton from "../../components/ProjectFileDownloadButton.astro"
+
+
+
+
+In diesem Praktium war meine Aufgabe zusammen mit zwei anderen Praktikanten das Konzept einer bereits vorhandenen Android & IOS App in VR umzusetzen. Das Ziel der Anwendung war es MANV (Massenanfall von Verletzten) Szenarien für Trainingszwecke zu Simulieren. Mehreren Teilnehmern (Ärzte, Ersthelfen, etc..) sollte es möglich sein zusammen in einer Szene mit den Patienten zu interagieren und diese zu behandeln. Einem Game Master ist es möglich Unwelteinflüsse und Störfaktoren zu bestimmen und das Geschehen bzw. das Vorgehen der einzelnen Teilnehmer zu beobachten und zu bewerten. Das VR-Projekt wurde von Grund auf von uns konzipiert und umgesetzt. Für die VR-Interaktion und Fortbewegung verwendeten wir das VRTK (Virtual Reality Toolkit), welches wir durch eigene Features erweitert haben. Für das Multiplayer Networking wurde das PUN (Photon Unity 3d Networking) Framework verwendet.
+
+Für einen detaillierteren Bericht der Entwicklung und verwendeten Technologien kann mit dem Link am Ende der Seite der Praktikumsbericht eingesehen werden.
+
+### Umwelteinflüsse und Störfaktoren
+<Image src="/project_assets/manv/night.png" />
+<ImageWithCaption src="/project_assets/manv/night2.png" caption="Nacht, Sirenen, Blaulicht, Menschengeschrei" />
+
+<ImageWithCaption src="/project_assets/manv/snow.png" caption="Schnee"/>
+
+### Diverse interaktions- und fortbewegungsmöglichkeiten in VR:
+<Image src="/project_assets/manv/2.png"/>
+
+
+<p class="pt-4 pb-0">Der Game Master hat die Kontrolle über die Unfallsszene. Er kann z.B. verschiedene Störfaktoren aktivieren und das Wetter anpassen . Der Status der Szene wird hierbei über das Netzwerk mit allen Teilnehmern synchronisiert</p>
+<ImageWithCaption src="/project_assets/manv/gm.png" caption="GameMaster Menü"/>
+
+Neben der VR Entwicklung hatte ich unteranderem die Aufgabe über Photogrammetrie und deren Verwendung in Unity zu recherchieren und Anleitungen/Tutorials zu erstellen. 
+<Image src="/project_assets/manv/photo1.jpg"/>
+<Image src="/project_assets/manv/photo2.jpg"/>
+<Image src="/project_assets/manv/photo3.jpg"/>
+
+<div class="card-actions justify-center">
+<ProjectFileDownloadButton icon_name="carbon:document-pdf" url="/project_assets/manv/Praktikumsbericht_MANV.pdf" url_name="Praktikumsbericht"/>
+</div>

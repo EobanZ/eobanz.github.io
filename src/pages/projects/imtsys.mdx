@@ -1,0 +1,39 @@
+---
+layout: "../../layouts/MarkdownProjectLayout.astro"
+title: "ImtSys"
+subtitle: "Master Gruppenprojekt - Note: 1.0"
+short_description: "Analyse von Ultraschallbildern durch KI. Mit dieser Software haben wird in der Kategorie Medizin des Bidt-Demodays 2021 gewonnen."
+preview_image_url: "/project_assets/imtsys/imtsys.jpg"
+techstack: ["Java", "Python", "Flask", "AI", "Image Processing", "OpenCV"]
+priority: 5
+---
+---
+### In foglgendem Video wird der Zweck unsere Software ausführlich erklärt:
+
+<iframe src="https://player.vimeo.com/video/560612268?h=d108c5de88" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/560612268">IMTsys - Analysetool f&uuml;r Ultraschallsequenzen</a> from <a href="https://vimeo.com/user142294639">IMTsys - HSA_innolab</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+In diesen Gruppenprojekt übernahm ich die folgenden Aufgaben:
+1. Entwurf der Software Architektur und Schnittstellen
+2. Implementierung des FLASK (Pyhton) Backends
+3. Bildverarbeitung zur Bestimmung relevater Abschnitte im Video und für die Filterung unbrauchbarer Bilder mit OpenCV
+
+
+## Beschreibung der App:
+In Kooperation mit dem Departement für Sport, Bewegung und Gesundheit der Universität Basel wurde eine Software zur automatisierten Analyse von Ultraschallsequenzen der Halsschlagader entwickelt.
+
+Herz-Kreislauf-Erkrankungen sind die führende Todesursache in Deutschland und verursachen insgesamt etwa 40 Prozent aller Sterbefälle. Darüber hinaus sind sie mit erheblichen individuellen Krankheitsfolgen verbunden und verursachen hohe gesellschaftliche Krankheitskosten.
+
+Durch präventative Analysen können Risikofaktoren für diese Erkrankungen aber frühzeitig erkannt und adäquate Therapiemaßnahmen eingeleitet werden, um so schwerere Erkrankungen vorzubeugen. Gesundheitsdaten wie das Gewicht oder der Blutdruck von Patient:innen sind aber aber nur vergleichsweise schwache Indikatoren.
+
+Die Wissenschaftler der Universität Basel untersuchen hingegen die Möglichkeit der Analyse von Ultraschallsequenzen der Halsschlagader. Die Aufnahme dieser Daten stellt eine niederschwellige Analysemethode dar, die keine aufwendigen Verfahren oder gar operative Eingriffe benötigt, sondern auch regelmäßig beim ansässigen Hausarzt durchgeführt werden könnte.
+
+Bei der Analyse werden die Halsschlagader selbst, die Dicke der Gefäßwände (besonders die "Intima-Media-Dicke") und mögliche Ablagerungen an jenen Gefäßwänden untersucht.
+
+Die manuelle Auswertung der Ultraschallsequenzen für die Forschung erfordert dabei einen enormen Arbeitsaufwand. Die Sequenzen müssen zunächst durchsucht und vorsortiert werden, um nur die Bilder zu erhalten, bei denen die Gefäßwände in der richtigen Lage deutlich sichtbar sind. Erst im Anschluss können die eigentlichen Messungen durchgeführt werden.
+
+Unser Analysetool IMTsys erleichtert diese Arbeit, indem es die Wissenschaftler:innen bei der Vorauswahl unterstüzt.
+
+Mittels Bildverarbeitungsalgorithmen wird zunächst das EKG analysiert, um die für die Analyse optimalen Zeitpunkte im Herzrhythmus zu finden. Ein Optical-Flow-Algorithmus filtert anschließend unruhige Bilder. Schließlich wird durch Einsatz eines selbsttrainierten Neuronalen Netzes der U-Net-Architektur eine Bildsegmentierung durchgeführt.
+
+So können durch die Vorverarbeitung zunächst alle unbrauchbaren Bilder gefiltert werden. Mithilfe des Neuronalen Netzes kann anschließend eine "Region of Interest" bestimmt werden, innerhalb der die Gefäßwände gut sichtbar sind. Diese kann nun exportiert und anschließend direkt in das Tool zur Ultraschallmessung importiert werden, um die Messung durchzuführen. Dadurch wird der Zeitaufwand für die Forschenden deutlich reduziert.

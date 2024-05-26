@@ -1,14 +1,11 @@
 ---
 const { src, caption } = Astro.props;
+import Image from "./Image.astro";
 ---
 
 
 <figure class=" text-center mt=0 mb=0">
-    <img
-        src={src}
-        alt="Description of image"
-        class="max-w-full mx-auto mt=0 mb=0"
-    />
+    <Image src={src}/>
     <figcaption class="mt-0 italic">
         {caption}
     </figcaption>

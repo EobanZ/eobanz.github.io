@@ -9,6 +9,6 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), icon(), compress(), mdx()],
-  output: "server",
-  adapter: vercel()
+  output: "static",
+
 });

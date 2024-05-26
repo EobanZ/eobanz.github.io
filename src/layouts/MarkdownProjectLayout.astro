@@ -6,7 +6,7 @@ import Prose from "../components/Prose.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<SharedLayout>
+<SharedLayout pageTitle = {frontmatter.title}>
     <a class="back btn btn-outline my-4 absolute top-0 md:left-16" href="/"
         >Back to Resume</a
     >
@@ -18,11 +18,13 @@ const { frontmatter } = Astro.props;
             alt={frontmatter.title}
             width="100"
             height="100"
-            class="w-full h-auto"
+            class="w-full h-auto border-2 shadow-md"
         />
     </div>
     <Prose>
+      <div class="text-black p-2">
         <slot />
+      </div>
     </Prose>
 
     

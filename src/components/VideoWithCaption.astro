@@ -1,0 +1,22 @@
+---
+const { src, caption, type, caption_classes, video_classes} = Astro.props;
+const caption_classes_to_apply= caption_classes || "mt-0 italic";
+const video_classes_to_apply = video_classes || "max-w-full mx-auto mt=0 mb=0";
+const fallbacktype = type || "video/mp4";
+console.log("used sr: " + src)
+---
+
+
+<figure class=" text-center mt=0 mb=0">
+    <video
+        class={video_classes_to_apply}
+        controls
+        muted
+    >
+    <source src={src} type = {fallbacktype}/>
+    </video>
+    <figcaption class={caption_classes_to_apply}>
+        {caption}
+    </figcaption>
+</figure>
+
