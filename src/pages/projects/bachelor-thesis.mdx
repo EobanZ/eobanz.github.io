@@ -1,0 +1,31 @@
+---
+layout: "../../layouts/MarkdownProjectLayout.astro"
+title: "Bachelor Thesis: Anti-Cheat"
+subtitle: "Recherche und prototypische Implementierung eines exemplarischen Verfahrens zur Cheat-Prevention und -Detection"
+short_description: "Im Rahmen dieser Bachelorarbeit (Note: 1,0) wurden aktuelle Cheats und Anti-Cheats auf deren Funktionsweisen untersucht. Des Weiteren wurde ein eigenes Anti-Cheat Konzept entworfen und prototypisch implementiert."
+preview_image_url: "/project_assets/bachelor/ACUebersicht.PNG"
+techstack: ["C++"]
+priority: 99
+---
+
+import ProjectPdfPreview from "../../components/ProjectPdfPreview.astro"
+import ProjectFileDownloadButton from "../../components/ProjectFileDownloadButton.astro"
+import ImageWithCaption from "../../components/ImageWithCaption.astro"
+
+Im Rahmen dieser Bachelorarbeit wurden aktuelle Cheats und Anti-Cheats auf deren Funktionsweisen untersucht. Mit den daraus gewonnen Erkenntnissen wurde ein eigenes Konzept einer Anti-Cheat Software erstellt und prototypisch implementiert. Des Weiteren wurde ein Cheat konzeptioniert und implementiert, der zum Testen des Anti-Cheats dient und einen Einblick in die Cheat-Entwicklung geben soll.
+
+## Überblick
+Für diese Arbeit wurden im Grunde drei Separate Anwendungen entwickelt.
+
+1. HackMe
+2. Cheat
+3. Anti-Cheat
+
+Die HackMe und der Cheat dienen zum Testen des Anti-Cheats und sollen gleichzeitig einen guten Einblick für diejenigen bieten, die an der Entwicklung von Cheats interessiert sind. Die HackMe simuliert das von dem Anti-Cheat Programm beschützte Spiel. Der Cheat versucht mit mehreren, häufig genutzten Cheat-Methoden, den HackMe-Prozess während der Laufzeit zu manipulieren. Das Anti-Cheat wiederum, versucht dies durch Ausführung diverser, in der Arbeit näher beschriebener Methoden zu verhindern.
+
+<div class="card-actions justify-center">
+<ProjectFileDownloadButton url="https://github.com/EobanZ/Anti-Cheat_Bachelor" url_name="Source Code" icon_name="carbon:logo-github"/>
+<ProjectFileDownloadButton url="/project_assets/bachelor/Bachelorarbeit.pdf" url_name="Thesis PDF" icon_name="carbon:document-pdf"/>
+
+</div>
+

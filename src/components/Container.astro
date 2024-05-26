@@ -6,6 +6,7 @@ import Card from "./Card.astro";
 import ContactCard from "./ContactCard.astro";
 const works = await Astro.glob("../pages/works/*.md");
 const projects = await Astro.glob("../pages/projects/*.mdx");
+projects.sort((a, b) => b.frontmatter.priority - a.frontmatter.priority);
 const studies = await Astro.glob("../pages/studies/*.md");
 const certificates = await Astro.glob("../pages/certificates/*.md");
 const blogs = await Astro.glob("../pages/blogs/*.md");

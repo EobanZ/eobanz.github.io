@@ -1,20 +1,32 @@
 ---
 layout: "../../layouts/MarkdownProjectLayout.astro"
-title: Master Thesis
+title: "Master Thesis"
 subtitle: Native Co-Location Plugin for Unity
 short_description: "As part of this master's thesis (grade: 1.0), a native plugin was developed (C++) that enables the creation of co-located applications for devices with inside-out tracking (e.g., Meta Quest). A new calibration method is used, which utilizes the guardian of an XR device for transformation determination."
-project_repo_link: 
 preview_image_url: "/project_assets/master/master_transf.png"
-files: [ {"title", "path"}]
-techstack: ["c++", "CMake", "Unity", "Meta Quest"]
+techstack: ["C++", "C#", "CMake", "Unity", "Meta Quest", "P/Invoke"]
 priority: 100
 ---
 
-## Abstract
+import ProjectPdfPreview from "../../components/ProjectPdfPreview.astro"
+import ProjectFileDownloadButton from "../../components/ProjectFileDownloadButton.astro"
+import ImageWithCaption from "../../components/ImageWithCaption.astro"
 
+
+
+## Abstract
 Current solutions for creating co-located VR applications typically rely on synchronizing platform-specific spatial anchors or shared SLAM data, which are often tied to cloud services. These solutions require either access to the camera images or the collected SLAM data, which some VR headsets prohibit. Therefore, in this work, two well-known calibration methods are derived and extended in an engine-independent manner, and a completely new method for solving the co-location problem is presented, which is applicable to all XR devices with spatial memory. The work describes how these methods were implemented in a predominantly natively developed toolkit and made available to developers through a Unity package. Additionally, various aspects of the toolkit, such as the usability of the methods, the algorithms used, and the resulting positional error, are evaluated.
 
-![alt text](/project_assets/master/master_transf.png)
+
+<div class="card-actions justify-center">
+<ProjectFileDownloadButton url="/project_assets/master/Masterarbeit_Zwick.pdf" icon_name="carbon:document-pdf" url_name="Master Thesis PDF" />
+</div>
+
+
+
+{/* <ImageWithCaption src="/project_assets/master/master_transf.png" caption="this a caption" /> */}
+
+{/* 
 <div class="card-actions justify-center">
             <a target="_blank" href="/Resume_CV/cv-20240219.pdf">
               <button class="btn btn-outline">
@@ -31,7 +43,7 @@ Current solutions for creating co-located VR applications typically rely on sync
                 <p>Download resume</p>
               </button>
             </a>
-          </div>
-<figure>
-    <object data="/Resume_CV/cv-20240219.pdf" type="application/pdf" width="100%"></object>
-</figure>
+          </div> */}
+
+{/* <ProjectPdfPreview file_url = "/Resume_CV/cv-20240219.pdf" file_name="Resume"  /> */}
+
