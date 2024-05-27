@@ -1,0 +1,25 @@
+---
+layout: "../../layouts/MarkdownProjectLayout.astro"
+title: "Genetic Level Generator"
+subtitle: "AusGENfuchst"
+short_description: "In diesem Projekt wurde ein Spiel umgesetzt, welches einen genetischen Algorithmus verwendet, um prozedurale Levels zu generieren"
+preview_image_url: "/project_assets/ausgenfuchst/main.PNG"
+techstack: ["Unity", "C#", "AI"]
+priority: 18
+---
+import Image from "../../components/Image.astro"
+import ImageWithCaption from "../../components/ImageWithCaption.astro"
+import ProjectFileDownloadButton from "../../components/ProjectFileDownloadButton.astro"
+
+In diesem 2D-Platformer wird KI verwendet, um unendlich viele Levels zu generieren. Ein genetischer Algorithmus generiert das level und nutzt eine Fitnessfunktion um diese stetig zu verbessern.
+
+### Screenshots:
+
+<div class="mx-auto">
+    <Image src = "/project_assets/ausgenfuchst/editor.PNG" />
+    <Image src = "/project_assets/ausgenfuchst/generation1.gif" />
+</div>
+
+<div class="flex justify-center">
+    <ProjectFileDownloadButton url="https://github.com/EobanZ/GeneticLevelGenerator" url_name="Source Code" icon_name="carbon:logo-github" />
+</div>
