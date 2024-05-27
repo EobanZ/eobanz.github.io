@@ -1,0 +1,68 @@
+---
+layout: "../../layouts/MarkdownProjectLayout.astro"
+title: "Adventured Reality"
+subtitle: "Augmented Reality Spiel für die Hololens"
+short_description: "Im Rahmen eines Praktikums der Universität Augsburg wurde eine AR Anwendung entwickelt, die aus mehreren Minispielen besteht und durch Reinforcement Learning lernt wann dem Spieler eine bestimmte Art von Tipp angezeigt werden soll."
+preview_image_url: "/project_assets/adventuredreality/holo.PNG"
+techstack: ["Unity", "C#", "AR", "Hololens", "MRTK", "Vuforia", "Blender", "Simplygon", "Photoshop"]
+priority: 10
+---
+import Image from "../../components/Image.astro"
+import ImageWithCaption from "../../components/ImageWithCaption.astro"
+import ProjectFileDownloadButton from "../../components/ProjectFileDownloadButton.astro"
+
+## Forschungsfrage:
+Wie können die Lernfähigkeit von Technologien und AR eingesetzt werden, um Probleme bei der Aushandlung von Nutzungsregeln mit medial augmentierten Objekten im öffentlichen Raum zu adressieren?
+
+## Überblick
+In diesem Praktkum sollte für eine Nutzerstudie ein Immersives AR-Game für die MS HoloLens entwickelt werden. Das Spiel besteht aus mehreren Minispielen und Rätseln, die über den Campus der Uni Augsburg verteilt sind. Das Hauptziel dieses Projekts war mithilfe von bestärkendem Lernen zu lernen wann dem Spieler Tipps zur Lösung gegeben werden soll und von welcher Art diese sein sollen. Die Teilehmer des Praktikums wurden in insgesammt 4 Gruppen aufgeteilt. Jede dieser Gruppe sollte ein Minispiel/Rätsel erstellen und war für eine der folgenden Zusatzaufgaben verantwortlich.
+
+1. Gruppe1: Tracking
+2. Gruppe2: Allgemeines User Interface, Assets und andere Globale Interfaces
+3. Gruppe3: Reinfocement Learning -> Zeitpunkt für Tipps lernen
+4. Gruppe4: Reinfocement Learning -> Gestaltung/Art für Tipps lernen
+
+## Meine Aufgaben in diesem Projekt
+Ich war in Grupp2 und somit neben dem Minispiel auch für das Globale UI verantwortlich.
+
+### Das Spiel
+Die Story des Spieles ist, dass die bekannte Campus Cat der Uni Augsburg verschunden ist und wiedergefunden werden muss. Der Spieler wird von Minispiel zu Minispiel geschickt um die Katze zu finden. Das Level meiner Gruppe ist das letzte in der Story und endet damit, dass die Katze gefunden wird. Der Eingang zu unserem Level wird durch einen Wächter geschützt der den Spieler nur vorbei lässt, wenn er ihm einen Fisch bringt, den man im vorherigen Level erhalten kann. Ist man am Wächter vorbei, sieht man eine Animation in der die Katze vor den Hunden flieht und sich auf deinem Baum versteckt. In unserem Minispiel geht es nun darum mithilfe der im Level zuvor erhaltenen Fische und einer Schleuder, die Hunde lange genug abzulenken um die Katze vom Baum holen zu können. Der Aufbau des Levels ist im ersten Bild auf dieser Seite zu sehen. 
+
+Für das Level wurde, mithilfe einer Satelitenaufnahme, in Blender ein teil eines Innenhofs der Uni nachgebaut. Dieses Mesh wurde unter anderem für das NavMesh der Hunde verwendet.
+
+<Image src ="/project_assets/adventuredreality/topGE.PNG"/>
+<Image src ="/project_assets/adventuredreality/topUnity.PNG"/>
+
+In der Game Szene war ich vor allem für die KI der Hunde, den GameManager, die Katzen Logik und für die Fische verantwortlich. Die Hunde KI wurde mit einer Statemachine umgesetzt: 
+
+<Image src ="/project_assets/adventuredreality/dogState.png"/>
+
+### Zusatzaufgabe (Globale Interfaces)
+Bei den Zusatzaufgaben habe ich mich um folgende Punkte gekümmert:
+
+1. **Global UI Manager:** <br/>
+Ein globales Interface durch das alle Entwickler einheitliche Text/Sprite Windows, Sprechblasen und Dialoge erzeugen können
+2. **Globaler Quest Manager:** <br/>
+Ein globales Interface durch das alle Gruppen den aktuellen fortschritt des Spieler abfragen oder bei wechsel durch Events darüber infomiert werden können
+3. **Globaler Inventory Manager:** <br/>
+Ein globales Interface, durch das Gegenstände in das Inventar gelegt oder daraus entnommen werden können. Der Spieler kann die Gegenstände durch das Eventgetriebene Inventory UI benutzen oder einsehen
+
+Um die Erstellung der Tipps für alle Gruppen zu erleichtern, habe ich auch ein Custom Editor Tool bzw. einen Workflow zur Erstellung von Tipps programmiert. Das Tool erstellt mit den durch die Gruppen bereitgestellten Daten, Callbacks die einem von der Reinfocement Gruppe benötigten Dictionary übergeben werden. 
+
+<Image src="/project_assets/adventuredreality/tippWorkflow.PNG" />
+<Image src="/project_assets/adventuredreality/TippsDia.png" />
+
+### Weiteres
+Außerdem habe ich das 3D Model der Campus Cat gerigged, animiert und LODs von ihr erstellt
+<Image src="/project_assets/adventuredreality/cat_rig.png" />
+<Image src="/project_assets/adventuredreality/LODs.PNG" />
+
+Einen besseren Überblick bietet evtl. unsere Präsentation. Bei den Videoaufnahmen gab es noch tracking Probleme, weshalb die Gegenstände im Hof sich nicht an der korrekten Position befinden.
+
+<div class="flex justify-center">
+<ProjectFileDownloadButton url="https://docs.google.com/presentation/d/1NZfzSbseGngZvzOijAXOJbiKuQy2XoIXZXTqQ2h65LA/edit?usp=sharing" url_name="Präsentation Slides" icon_name="carbon:presentation-file" />
+</div>
+
+
+
+
