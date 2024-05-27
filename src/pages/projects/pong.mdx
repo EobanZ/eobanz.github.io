@@ -1,0 +1,23 @@
+---
+layout: "../../layouts/MarkdownProjectLayout.astro"
+title: "Pong"
+subtitle: "Advanced"
+short_description: "Eine etwas andere Version von Pong."
+preview_image_url: "/project_assets/pong/1.PNG"
+techstack: ["Unity", "C#"]
+priority: 16
+---
+import Image from "../../components/Image.astro"
+import ImageWithCaption from "../../components/ImageWithCaption.astro"
+import ProjectFileDownloadButton from "../../components/ProjectFileDownloadButton.astro"
+
+Dieses Spiel ist eine Version von Pong, die dem klassischem Gamplay neue Mechaniken hinzufügt. Dem Spieler ist es möglich seinen Schläger zu neigen und aufzuladen, um den Ball mit schwung zurückzuschlagen. Außerdem tauchen zufällig Hindernisse im Spielfeld auf um das Spiel zu erschweren.
+
+<div class="mx-auto">
+ <Image src = "/project_assets/pong/pong.gif"/>
+</div>
+
+<div class="flex justify-center">
+    <ProjectFileDownloadButton url="https://github.com/EobanZ/Pong/releases" url_name="Download" icon_name="carbon:link" />
+    <ProjectFileDownloadButton url="https://github.com/EobanZ/Pong" url_name="Source Code" icon_name="carbon:logo-github" />
+</div>
