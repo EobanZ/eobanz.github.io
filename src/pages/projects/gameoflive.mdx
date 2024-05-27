@@ -1,0 +1,30 @@
+---
+layout: "../../layouts/MarkdownProjectLayout.astro"
+title: "Game Of Life"
+subtitle: "Coding Challange"
+short_description: "Eine etwas umfangreichere Version von Game of Life und einem Editor"
+preview_image_url: "/project_assets/gameoflife/random.PNG"
+techstack: ["Unity", "C#"]
+priority: 17
+---
+import Image from "../../components/Image.astro"
+import ImageWithCaption from "../../components/ImageWithCaption.astro"
+import ProjectFileDownloadButton from "../../components/ProjectFileDownloadButton.astro"
+
+Für eine Coding Challange sollte eine Version des Klassikers Game of Life implementiert werden. 
+Meine Lösung habe ich in der Unity Engine umgesetzt. 
+Als zusätzliche Features können in einem Editor eigene Maps erstellt und gespeichert werden. 
+Die FPS(Frames per second) und die Größe des Grids sind auch vom Nutzer anpassbar. Außerdem kann die Farbe und Form der Zellen gewählt werden.
+
+### Screenshots:
+
+<div class="mx-auto">
+ <ImageWithCaption src = "/project_assets/gameoflife/golEditor.gif" caption="Editor"/>
+ <ImageWithCaption src = "/project_assets/gameoflife/golSettings.gif" caption="Settings: Form, Farbe und Gradient" />
+</div>
+
+
+<div class="flex justify-center">
+    <ProjectFileDownloadButton url="https://github.com/EobanZ/GameOfLife/releases" url_name="Download App" icon_name="carbon:link" />
+    <ProjectFileDownloadButton url="https://github.com/EobanZ/GameOfLife" url_name="Source Code" icon_name="carbon:logo-github" />
+</div>
