@@ -1,9 +1,9 @@
 ---
-title: Certified Tactical Emergency Medical Technician (TEMT)
-org: 123 Main Street, Los Angeles
-tags: [Tactical Medicine, First Aid Training, Critical Care, Triage Protocol]
-url: http://akazedu.edu/seaghi
-date: 1992
+title: Generative AI Fundamentals
+org: Google
+tags: [AI, Gen AI]
+url: "https://www.cloudskillsboost.google/public_profiles/621dd801-7dfe-46d2-b7fd-1c9f3b4a876e/badges/6770018?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+date: 2023
 ---
 
-The Tactical Emergency Medical Technician (TEMT) certification trains healthcare professionals to provide advanced medical care in tactical and high-risk environments, such as law enforcement operations, military settings, or emergency response scenarios. TEMTs are trained to rapidly assess and treat traumatic injuries, stabilize patients in adverse conditions, and closely collaborate with tactical and rescue teams to ensure the safety and well-being of victims.
+Google Skill Badge for their "Generative AI Fundamentals" course

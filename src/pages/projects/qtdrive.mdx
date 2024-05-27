@@ -8,7 +8,6 @@ techstack: ["Qt", "C++", "BaaS", "Google Drive", "Desktop"]
 priority: 19
 ---
 import Image from "../../components/Image.astro"
-import ImageWithCaption from "../../components/ImageWithCaption.astro"
 import ProjectFileDownloadButton from "../../components/ProjectFileDownloadButton.astro"
 
 Mit dieser Anwendung wollte ich herausfinden wie man mithilfe des Qt Frameworks mit Cloud Services wie Google Drive, Onedrive, Dropbox, etc.. interagieren kann. Im laufe der Recherche und Entwicklung habe ich mich dann jedoch nur auf einen Service festgelet: Google Drive. Durch diese späte Entscheidung wurde der Code etwas komplexer als eigentlich nötig. Die wichtigsten Funktionen, die für die Kommunikation mit der Cloud verantwortlich sind befinden sich in den Klassen: Authenticator_GoogleDrive & CloudInterface_GoogleDrive.
@@ -26,7 +25,7 @@ Im Source Code finden sich unteranderem Beispiele wie man mit der Qt Bibliothek 
 - Erstellen von API queries.
 
 ## Demo:
-<div class="mx-auto">
+<div class="w-full h-full max-h-[90vh] w-auto border-2 shadow-md mx-auto m-4">
  <Image src="/project_assets/qtdrive/cloud.gif"/>
 </div>
 
