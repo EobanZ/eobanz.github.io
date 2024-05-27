@@ -1,0 +1,31 @@
+---
+layout: "../../layouts/MarkdownProjectLayout.astro"
+title: "Check-In System"
+subtitle: "Note: 1.0"
+short_description: "Ein Web-App (Front + Backend) mit der das ein und auschecken aus Räumen möglich ist. Sehr ähnlich wie \"Darf ich Rein\"."
+preview_image_url: "/project_assets/oosd/oosd2.PNG"
+techstack: ["Flutter", "Spring Boot", "Vaadin", "Java", "Dart", "PostgreSQL", "Mobile", "REST-API"]
+priority: 12
+---
+import Image from "../../components/Image.astro"
+import ImageWithCaption from "../../components/ImageWithCaption.astro"
+import ProjectFileDownloadButton from "../../components/ProjectFileDownloadButton.astro"
+
+Dieses System besteht aus zwei Frontents (Client + Owner) und einem Backend. Owner können sich durch eine mit Vaadin umgesetzte Web-Schnittstelle anmelden und Räume erstellen für die sie dann einen QR-Code drucken können. Mit der in Flutter implementierten Mobile App können sich Clients dann drch das Scannen den QR-Codes anmelden und auch wieder abmelden. Der Owner hat durch die Web-App zugriff auf Informationen über Clients
+
+Das System wird ausführlich in der unten verklinkten PDF beschrieben.
+
+<div class="flex justify-center">
+    <ProjectFileDownloadButton url="/project_assets/oosd/OOSD.pdf" url_name="Project Bericht" icon_name="carbon:document-pdf"/>
+</div>
+
+### Screenshots:
+
+<div class="mx-auto">
+<Image src="/project_assets/oosd/oosd1.PNG" />
+<Image src="/project_assets/oosd/oosd2.PNG" />
+<Image src="/project_assets/oosd/oosd3.PNG" />
+<Image src="/project_assets/oosd/oosd4.PNG" />
+
+
+</div>
