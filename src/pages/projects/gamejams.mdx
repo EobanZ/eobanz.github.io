@@ -1,0 +1,57 @@
+---
+layout: "../../layouts/MarkdownProjectLayout.astro"
+title: "Game Jams"
+subtitle: "BeansJams 1 + BeansJam:Mobile + BeansJam2022"
+short_description: "Projekte die ich für Game Jams erstellt habe."
+preview_image_url: "/project_assets/beansjam1/gameplay.PNG"
+techstack: ["Unity", "Unreal", "C#", "C++", "MetaHumans"]
+priority: 14
+---
+import Image from "../../components/Image.astro"
+import ImageWithCaption from "../../components/ImageWithCaption.astro"
+import ProjectFileDownloadButton from "../../components/ProjectFileDownloadButton.astro"
+
+
+<div class="mt-4"/>
+## BeansJam 2022: Daily Struggle
+In dem Spiel geht es darum eine Gruppe von Arbeitnehmern wach zu halten.  Diese sind durch den ständigen Crunch schon völlig am Ende und sind deshalb kurz davor einzuschlafen. Das passt dem Chef natürlich überhaupt nicht.  Wenn er jemanden erwischt der schläft wir dieser sofort gefeuert.
+
+Du spielst einen freundlichen Poltergeist, der in Objekte schlüpfen kann und diese verwendet um die eingeschlafenen Arbeiter wieder aufzuwecken. 
+
+Wenn du als Geist nah genug an einem Objekt bist drücke "E" um diesen zu übernehmen. Du kannst diesen dann mit der bekannten WASD steuerung bewegen. Außerdem kannst du mit der Leertast ungebgenzt oft springen. Triff die Arbeiter mit den Gegenständen in Kopfnähe um diese wieder aufzuweken
+
+Du hast gewonnen wenn sobald es Feierabend ist und noch ein Arbeiter seinen Job besitzt.
+<iframe class="mx-auto" width="560" height="315" src="https://www.youtube.com/embed/vweNJwdiilE?si=8PmILC-oMxYizhvX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+## BeansJam: Mobile
+
+Dieses Spiel ist das Ergebnis der Teilnahme am BeansJam: Mobile. Das Thema des Jams war Blues & Jahrmarkt. <br/>
+Es ist ein Mobile Spiel und muss mit dem Lagesensor des Smartphones gesteuert werden. Im Spiel geht es darum so lange zu überleben wie möglich, um einen hohen Score zu erreichen. Man steuert einen Autoscooter mit dem man den auf das Spielfeld einschlagenden Notenbomben ausweichen muss. Es gibt 3 verschiedene Arten von Noten, welche ein eigenes Verhalten haben. Beim einschlagen auf das Spielfeld reißen sie Löcher in den Boden, in die der Spieler fallen kann. Der Autoscooterfahrer hat jedoch die Möglichkeit die zufällig auf dem Spielfeld auftauchenden Holzbretter einzusammeln. Wenn 10 dieser Bretter eingesammelt wurden, wird das Spielfeld wiederhergestellt und die Löcher verschwinden. 
+### Screenshots:
+<div class="mx-auto">
+    <Image src="/project_assets/beansjam2/1.jpg"/>
+    <Image src="/project_assets/beansjam2/2.jpg"/>
+</div>
+
+<div class="flex justify-center">
+    <ProjectFileDownloadButton url="https://jackpioneer.itch.io/beansjam1" url_name="Download Game" icon_name="carbon:link" />
+    <ProjectFileDownloadButton url="https://github.com/EobanZ/BeansJam_Mobile" url_name="Source Code" icon_name="carbon:logo-github" />
+</div>
+
+
+## BeansJam 1
+Dieses Spiel entstand während meiner ersten Teilnahme an einem GameJam und war auch eines meiner ersten Projekte mit der Unity Engine. <br/>
+Dementsprechend simple wurde das Spiel auch. Das Thema des Jams war Space & Mafia. Das Ziel des Spieles ist mit dem im Screenshot zu sehenden Space-Auto die Meatball-Meteoriten abzuschießen und die darin enthaltenen Pizzastücke einzusammeln ohne vom Weltraummonster Spaghetto erwischt zu werden. Da ich damals noch keine Versionskontrolle verwendet habe, gibt es hierfür leider keinen Source Code. 
+
+### Screenshots:
+<div class="mx-auto">
+    <Image src="/project_assets/beansjam1/gameplay.PNG" />
+    <ImageWithCaption src="/project_assets/beansjam1/spaghetto.PNG" caption="Spaghetto"/>
+    <ImageWithCaption src="/project_assets/beansjam1/ravioli.gif" caption="Gameplay"/>
+</div>
+
+<div class="flex justify-center">
+    <ProjectFileDownloadButton url="https://gamejolt.com/games/RavioliRavioli/257809" url_name="Download Game" icon_name="carbon:link" />
+</div>
