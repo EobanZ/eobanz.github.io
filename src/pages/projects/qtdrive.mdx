@@ -1,0 +1,35 @@
+---
+layout: "../../layouts/MarkdownProjectLayout.astro"
+title: "Qt Drive"
+subtitle: "Google Drive Frontend mit Qt"
+short_description: "Eine Desktop-Anwendung, die zeigt wie mithilfe des Qt Frameworks das Google Drive Rest API verwendet werden kann"
+preview_image_url: "/project_assets/qtdrive/qtdrive1.PNG"
+techstack: ["Qt", "C++", "BaaS", "Google Drive", "Desktop"]
+priority: 19
+---
+import Image from "../../components/Image.astro"
+import ImageWithCaption from "../../components/ImageWithCaption.astro"
+import ProjectFileDownloadButton from "../../components/ProjectFileDownloadButton.astro"
+
+Mit dieser Anwendung wollte ich herausfinden wie man mithilfe des Qt Frameworks mit Cloud Services wie Google Drive, Onedrive, Dropbox, etc.. interagieren kann. Im laufe der Recherche und Entwicklung habe ich mich dann jedoch nur auf einen Service festgelet: Google Drive. Durch diese späte Entscheidung wurde der Code etwas komplexer als eigentlich nötig. Die wichtigsten Funktionen, die für die Kommunikation mit der Cloud verantwortlich sind befinden sich in den Klassen: Authenticator_GoogleDrive & CloudInterface_GoogleDrive.
+
+Die Anwendung ermöglicht es Dateien per Drag and Drop, in neu erstellte Ordner hochzuladen. Diese Ordner werden im Programm aufgelistet und durch einen Doppelklick kann ein Link zum Teilen abgerufen werden. Die Ordner samt Daten können durch ein Kontextmenü auch wieder gelöscht werden.
+
+Im Source Code finden sich unteranderem Beispiele wie man mit der Qt Bibliothek folges durchführen kann
+
+- OAuth2 Authentifizierung mihilfe des QOAuth2AuthorizationCodeFlow
+- Uploaden von Daten als resumable-upload
+- Uploaden von Daten als multipart-upload
+- Erstellen von Ordnern
+- Löschen von Ordnern
+- Teilen von Ordnern und Daten
+- Erstellen von API queries.
+
+## Demo:
+<div class="mx-auto">
+ <Image src="/project_assets/qtdrive/cloud.gif"/>
+</div>
+
+<div class="flex justify-center">
+    <ProjectFileDownloadButton url="https://github.com/EobanZ/QtGoogleDrive" url_name="Source Code" icon_name="carbon:logo-github" />
+</div>
