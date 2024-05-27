@@ -1,0 +1,27 @@
+---
+layout: "../../layouts/MarkdownProjectLayout.astro"
+title: "AR an der Iller"
+subtitle: "DV-Projekt - Note: 1.0"
+short_description: "In diesem DV-Projekt (1,0) wurde mit Hilfe der Unreal Engine 4 und OpenCV eine eignene Augmented Reality Lösung erstellt, die den speziellen Anforderungen entsprach."
+preview_image_url: "/project_assets/DV/plane.PNG"
+techstack: ["Unreal Engine", "C++", "OpenCV", "Computer Vision", "AR"]
+priority: 13
+---
+import Image from "../../components/Image.astro"
+import ImageWithCaption from "../../components/ImageWithCaption.astro"
+import ProjectFileDownloadButton from "../../components/ProjectFileDownloadButton.astro"
+
+Das Ziel unseres Projekts war auf einer Aussichtsplattform an einer Staustufe in Legau eine Augmented Reality Sicht auf die Staustufe und das Elektrizitätswerk zu realisieren. 
+
+Familien, die dort mit dem Rad unterwegs sind, sollen angeregt werden, sich über den Umweltschutz und die Renaturierung des Flussbettes zu erkundigen. Hierzu sollte auf dem Aussichtsturm eine Touchscreen-Monitor und eine Kamera, welche den Staudamm zeigt, angebracht werden. Mit dem Einsatz der Unreal Engine 4 und der OpenCV Bibliothek sollten passgenau virtuelle Objekte im Bereich der Schleuse eingeblendet werden. Da der Turm sich leicht bewegt, musste eine Möglichkeit gefunden werden, wie die Objekte trotz Kamerabewegung immer auf der richtigen Stelle angezeigt werden. Da keine der Augmented Reality SDKs unseren Anforderungen entsprach, entschieden wir die speziellen Augmented Reality Algorithmen mithilfe einer Open Source Computer Vision Bibliothek, selbst zu schreiben und in die Unreal Engine zu implementieren.
+
+
+<div clss ="mx-auto">
+<Image src = "/project_assets/DV/rad.jpg" />
+<Image src = "/project_assets/DV/ARIllerTracking.gif" />
+</div>
+
+
+<div class="flex justify-center">
+    <ProjectFileDownloadButton url="https://github.com/EobanZ/AR_Iller" url_name="Source Code" icon_name="carbon:logo-github"/>
+</div>
