@@ -1,0 +1,29 @@
+---
+layout: "../../layouts/MarkdownProjectLayout.astro"
+title: "Function Hooking Library"
+subtitle: "Eine Klasse/Lib die es ermöglicht Assembler Caves in fremden Source Code zu injizieren"
+short_description: "Eine Klasse/Lib die es ermöglicht Assembler Caves in fremden Source Code zu injizieren"
+preview_image_url: "/project_assets/hook/jmpHook.png"
+techstack: ["C++", "Hacking", "Reverse Engineering"]
+priority: 11
+---
+import Image from "../../components/Image.astro"
+import ImageWithCaption from "../../components/ImageWithCaption.astro"
+import ProjectFileDownloadButton from "../../components/ProjectFileDownloadButton.astro"
+
+Dieses kleine "Framework" ermöglicht das injizieren von Assembler Caves (Midfunction) in fremden Quellcode und das hooking von Funktionen via Prolog oder VTable (Detour). In der main.cpp wird gezeigt, wie ein MidfunctionHook in dem Spiel No Man's Sky verwendet werden kann um die Anzahl der gesammelten Ressourcen zu erhöhen. Das Framework entstand, da die existierenden Bibliotheken/Frameworks für meine Zwecke einen zu hohen Overload hatten. Außerdem wollte ich mehr über die Aufrufkonventionen, Register, etc.. von x64 Architekturen lernen. Dem Nutzer ist es möglich zu entscheiden ob der Hook eine Relative (In 2GB memory range) oder Absolute Jmp Adresse für das Trampolin verwenden möchte (Relativ benötigt 5 Bytes, Absolut 14 Bytes). Da dieses Projekt keinen Assembler und Disassembler verwendet, muss der zu injizierende Assembler Code im Voraus kompiliert werden. Da kein Disassembler verwendet wird, darf sich im überschriebenen Quellcode keine Instruktion mit relativer Adresse befinden..
+
+Detailiertere Infos über Hooks sind in meiner Bachelorarbeit zu finden
+
+Der Source Code einer alten Version der Lib ist online einzusehen. Diese Version zeigt den Einsatz der Klassen im Spiel "No-Man's Sky".
+Die aktuelle Version ist nich öffentlich, damit code der sie verwendet nicht so leicht von anti-cheats geflagged werden können. 
+
+<div class="flex justify-center">
+    <ProjectFileDownloadButton url="https://github.com/EobanZ/EoHooks/tree/master/NoMansSkyHack/NoMansDLL" url_name="Source Code" icon_name="carbon:logo-github" />
+</div>
+
+Ein Screenshot der aktuellen Version:
+<div class ="m-auto">
+    <Image src="/project_assets/hook/eohooks.png" />
+</div>
+
